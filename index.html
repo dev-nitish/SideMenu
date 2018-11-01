@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Sidebar</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <!-- <script src="sidebar.js"></script> -->
+</head>
+  <body>
+   
+    <div id="overlay"></div>
+    <!--SIDE MENU-->
+    <div id="side-menu-icon">
+      <div id="menu"><span>
+      </span></div>
+    </div>
+
+    <div id="side-menu" class="container dropdown">
+
+      <a href="#" class="btn" role="button" id="menu-home">
+        <img src="./resource/outline_home_white_36dp.png"><span>&nbsp;&nbsp;&nbsp;Home</span></a>
+
+      <a href="#" class="btn" role="button" id="menu-other">
+        <img src="./resource/outline_sentiment_satisfied_white_36dp.png">
+        <span>&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;</span></a>
+
+      <a class="btn dropdown-toggle" id="menu-other" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <img src="./resource/outline_sentiment_satisfied_white_36dp.png">
+        &nbsp;&nbsp;&nbsp;More Details
+      </a>
+
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <a href="#" class="btn" role="button" id="menu-other"><span>&nbsp;&nbsp;&nbsp;Submenu 1</span></a>
+        </div>
+      </div>
+
+
+      <a href="#" class="btn" role="button" id="menu-other">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>&nbsp;&nbsp;&nbsp;Contact Us</span></a>
+    </div>
+
+
+
+    <p><span>awesome</span><br>s i d e m e n u</p>
+    <p id="author"><i>by</i> <a href="#" target="blank">Blank</a></p>
+    
+
+
+    <script type="text/javascript">  
+      var menu = document.querySelector( "#menu" );
+      var sidebar = document.querySelector( "#side-menu" );
+      var overlay = document.querySelector( "#overlay" );
+
+      menu.addEventListener( "click", function(){
+        this.classList.toggle( "active" );
+        sidebar.classList.toggle( "active" );
+        overlay.classList.toggle( "active" );
+        overlay.onclick = function () {
+          menu.classList.toggle( "active" );
+          sidebar.classList.toggle( "active" );
+          overlay.classList.toggle( "active" );
+        }
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
